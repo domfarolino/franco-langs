@@ -6,10 +6,11 @@ using namespace std;
  * Base class "Employee"
  */
 class Employee {
-public:
+protected:
   double baseWage;
 
-  Employee(double inputBaseWage = 0) {
+public:
+  Employee(double inputBaseWage) {
     this->baseWage = inputBaseWage;
   }
 
@@ -21,32 +22,33 @@ public:
 
 /**
  * Descendant of Employee
- * Salesmen wages = baseWage + 10%
+ * Salesmen wage = baseWage + 10%
  */
-class Salesman : public Employee {
+class Salesman: public Employee {
 public:
   Salesman(double inputBaseWage): Employee(inputBaseWage) {
     /* don't really need to do anything */
   }
 
   double getCalculatedWage() {
-    return baseWage+(baseWage*.1);
+    return this->baseWage + (this->baseWage*.1);
   }
 
 };
 
 /**
  * Descendant of Employee
- * Programmer wages = baseWage + 40%
+ * Programmer wage = baseWage + 40%
  */
-class Programmer : public Employee {
+class Programmer: public Employee {
 public:
+
   Programmer(double inputBaseWage): Employee(inputBaseWage) {
     /* don't really need to do anything */
   }
 
   double getCalculatedWage() {
-    return baseWage+(baseWage*.4);
+    return this->baseWage + (this->baseWage*.4);
   }
 
 };
@@ -64,11 +66,11 @@ int main() {
   Salesman* salesman     = new Salesman(100.00);
   Programmer* programmer = new Programmer(100.00);
 
-  cout << "baseEmployee->getCalculatedWage: " << baseEmployee->getCalculatedWage() << endl;
+  cout << "baseEmployee->getCalculatedWage:   " << baseEmployee->getCalculatedWage() << endl;
   cin.get();
-  cout << "salesman->getCalculatedWage: "     << salesman->getCalculatedWage()     << endl;
+  cout << "salesman->getCalculatedWage:       " << salesman->getCalculatedWage()     << endl;
   cin.get();
-  cout << "programmer->getCalculatedWage: "   << programmer->getCalculatedWage()   << endl;
+  cout << "programmer->getCalculatedWage:     " << programmer->getCalculatedWage()   << endl;
   cin.get();
 
   getEmployeeWage(baseEmployee);
@@ -76,6 +78,7 @@ int main() {
   getEmployeeWage(salesman);
   cin.get();
   getEmployeeWage(programmer);
+  cin.get();
 
   return 0;
 }
