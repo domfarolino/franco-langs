@@ -68,7 +68,7 @@ public:
  * to it.
  */
 void printTypeAndArea(Shape* shape) {
-  cout << "Getting area for: " << typeid(shape).name() << endl;
+  //cout << "Getting area for: " << typeid(shape).name() << endl;
   cout << shape->getArea() << endl;
 }
 
@@ -80,16 +80,18 @@ int main() {
   
   // Works as normal
   cout << rectangle->getArea() << endl;
+  cin.get();
   cout << triangle->getArea() << endl;
+  cin.get();
   
   printTypeAndArea(rectangle);
+  cin.get();
   printTypeAndArea(triangle);
+  cin.get();
 
   // Casting examples
-  cout << typeid((Shape*)rectangle).name() << endl;
   cout << ((Shape*)rectangle)->getArea() << endl;
-
-  cout << typeid((Shape*)triangle).name() << endl;
+  cin.get();
   cout << ((Shape*)triangle)->getArea() << endl;
   return 0;
 }
