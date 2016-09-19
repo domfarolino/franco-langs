@@ -80,5 +80,6 @@ int main() {
   getEmployeeWage(programmer);
   cin.get();
 
+  // Casting exmaple
   return 0;
 }

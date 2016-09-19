@@ -38,7 +38,8 @@ public:
 /**
  * Rectangle has some info
  * in common with `Shape` but
- * 
+ * must provide its own implementation
+ * of getArea()
  */
 class Rectangle: public Shape {
 public:
@@ -89,9 +90,6 @@ int main() {
   printTypeAndArea(triangle);
   cin.get();
 
-  // Casting examples
-  cout << ((Shape*)rectangle)->getArea() << endl;
-  cin.get();
-  cout << ((Shape*)triangle)->getArea() << endl;
+  // Casting exmaple
   return 0;
 }
