@@ -80,6 +80,9 @@ int main() {
   getEmployeeWage(programmer);
   cin.get();
 
+  cout << ((Employee*)salesman)->getCalculatedWage() << endl;
+  cout << ((Employee*)programmer)->getCalculatedWage() << endl;
+
   // Casting exmaple
   return 0;
 }
