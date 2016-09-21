@@ -3,10 +3,17 @@
 
 using namespace std;
 
+/**
+ * First level
+ */
 class TopClass {
 public:
   string topMember;
 };
+
+/**
+ * Second level
+ */
 
 class LeftClass: public TopClass {
 public:
@@ -18,6 +25,10 @@ public:
   string rightMember;
 };
 
+/**
+ * Third level
+ */
+
 class BottomClass: public LeftClass, public RightClass {
 public:
   string bottomMember;
@@ -28,6 +39,6 @@ int main() {
 
   bottomClass->topMember = "topMember";
 
-  // Addresses/Disambiguate
+  // Addresses
   return 0;
 }
