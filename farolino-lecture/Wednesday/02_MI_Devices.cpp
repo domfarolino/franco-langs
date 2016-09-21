@@ -47,8 +47,5 @@ int main() {
   WirelessAdapter* wirelessAdapter = new WirelessAdapter("92494N", "292485U");
 
   cout << wirelessAdapter->getDeviceID() << endl;
-
-  cout << "Network deviceID: " << wirelessAdapter->NetworkDevice::getDeviceID() << endl;
-  cout << "USB deviceUD: " << wirelessAdapter->USBDevice::getDeviceID() << endl;
   return 0;
 }
