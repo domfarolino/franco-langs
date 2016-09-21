@@ -44,6 +44,7 @@ public:
   string getElement() const {
     return element;
   }
+
 };
 
 ostream& operator<<(ostream &output, const List_Element& listElement) {
@@ -72,6 +73,12 @@ public:
       cout << *(v[i]) << ", ";
     }
     cout << "]" << endl;
+  }
+
+  ~List() {
+    for (int i = 0; i < v.size(); ++i) {
+      delete v[i];
+    }
   }
 };
 

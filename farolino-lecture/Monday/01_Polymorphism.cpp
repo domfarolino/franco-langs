@@ -83,6 +83,8 @@ int main() {
   cout << ((Employee*)salesman)->getCalculatedWage() << endl;
   cout << ((Employee*)programmer)->getCalculatedWage() << endl;
 
-  // Casting exmaple
+  delete baseEmployee;
+  delete salesman;
+  delete programmer;
   return 0;
 }

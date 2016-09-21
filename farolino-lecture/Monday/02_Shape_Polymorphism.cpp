@@ -91,5 +91,8 @@ int main() {
   cin.get();
 
   // Casting exmaple
+
+  delete rectangle;
+  delete triangle;
   return 0;
 }
