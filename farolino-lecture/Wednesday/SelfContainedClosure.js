@@ -10,6 +10,6 @@ function outerFunction() {
 
 var variableToCaptureInnerFunction = outerFunction();
 
-//variableToCaptureInnerFunction();
+variableToCaptureInnerFunction();
 
 //SlideVisOfClosure

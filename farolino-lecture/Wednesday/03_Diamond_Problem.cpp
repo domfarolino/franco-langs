@@ -15,12 +15,12 @@ public:
  * Second level
  */
 
-class LeftClass: public TopClass {
+class LeftClass: public virtual TopClass {
 public:
   string leftMember;
 };
 
-class RightClass: public TopClass {
+class RightClass: public virtual TopClass {
 public:
   string rightMember;
 };
@@ -40,5 +40,8 @@ int main() {
   bottomClass->topMember = "topMember";
 
   // Addresses
+
+  cout << &bottomClass->LeftClass::topMember << endl;
+  cout << &bottomClass->RightClass::topMember << endl;
   return 0;
 }

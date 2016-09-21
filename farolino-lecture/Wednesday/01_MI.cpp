@@ -63,7 +63,7 @@ void getTeacherInformation(Teacher* teacher) {
 }
 
 int main() {
-  Teacher* teacher = new Teacher("Dom", 21, "prog langs temp prof", 0.0, "Swfit 520");
+  Teacher* teacher = new Teacher("Dom", 21, "prog langs temp prof", 0.0, "Swift 520");
   
   getTeacherInformation(teacher);
   
